@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PATTERN</title>
+</head>
+<body>
+    <h1>PATTERN</h1>
+    <input type="text" name="angka" id="angka" placeholder="Masukkan Angka">
+    <br><br>
+    <input type="button" value="GANJIL" id="ganjil"><input type="button" value="HURUF" id="huruf">
+    <h2>RESULT :</h2>
+    <h2 id="hasil"></h2>
+</body>
+<script>
+    let tombolGanjil = document.getElementById("ganjil")
+    let tombolHuruf = document.getElementById("huruf")
+    
+    function ganjil(){
+        let bilangan = ''
+        let baris = document.getElementById("angka").value
+        let range = 100
+        let i
+        let n = 0
+        // ---Ganjil---
+        let gnjl =[]
+
+        for(i=0; i<range; i++){
+            if(i%2 != 0){
+                gnjl.push(i)
+            }
+        }
+        // -----------
+        for(let j=0; j< Number (baris); j++){
+            for(let k = 0; k <=j; k++){
+                bilangan += `${gnjl[n++]}`
+            }
+            bilangan += `\n`
+        }
+        document.getElementById('hasil').innerHTML =  bilangan += `\n`
+    }
+    tombolGanjil.addEventListener('click', ganjil)
+
+    function huruf(){
+                               
+        return
+        let hrf = String.fromCharCode(96+(ganjil))
+                
+                    
+    }
+    document.getElementById('hasil').innerHTML = hrf += `\n`
+
+tombolHuruf.addEventListener('click', huruf)
+
+</script>
+</html>

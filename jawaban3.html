@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FORM USERS</title>
+    <style>
+        #tableuser {
+            width: 75%;
+            border: 1px solid;
+        }
+
+        #tableuser thead{
+            background-color: aqua;
+        }
+    </style>
+</head>
+<body>
+    <h1>FORM USERS</h1>
+    <p><input type="text" name="user" id="username" placeholder="username"><input type="text" name="mail" id="email" placeholder="email">role </p>
+    <br>
+    <input type="button" name="add" value="ADD USER" id="adduser">
+    <h2>USERS DATA</h2>
+    <table id="tabeluser">
+        <thead>
+            <tr>
+                <th>No</th>
+                <th>Username</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data -->
+        </tbody>
+    </table>
+    <h2>__________________________________________________</h2>
+    
+</body>
+<script src="userData.js"></script>
+<script src="dataBase.js"></script>
+</html>

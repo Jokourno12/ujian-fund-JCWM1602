@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DERET FIBONANCI</title>
+</head>
+<body>
+    <h1>DERET FIBONANCI</h1>
+    <p>Masukan Angka : <input type="text" name="" id="angka" placeholder="Masukkan Angka"></p>
+    <br><br>
+    <input type="button" value="SHOW" id="show"><input type="button" value="GANJIL" id="ganjil"><input type="button" value="GENAP" id="genap">
+    <h2>RESULT :</h2>
+    <h2 id="hasil"></h2>
+    <h2>_________________________</h2>
+</body>
+<script>
+    function fibonanci(){
+        let angka = document.getElementById('angka').value
+        
+        let fbnc =[0,1] //---> 0 - 0+1 - 1+2
+        console.log(fbnc[1]+fbnc[1-1])
+        /*
+        [0,1,1,2,3,5]
+        [5] --- > n = index[variabel.length]+index[(variabel.length)-1]
+        [8] --- > 
+        */
+        
+            //mencari fibonanci
+           function show(){
+            let limit = document.getElementById('angka').value
+            for(let i = 1; i<limit; i++){
+                let n = Number(fbnc[i]+fbnc[i-1])
+                fbnc.push(n)
+            }
+            
+            document.getElementById('hasil').innerHTML = fbnc
+           }
+           
+
+    }
+</script>
+</html>
